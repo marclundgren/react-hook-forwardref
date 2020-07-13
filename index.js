@@ -4,13 +4,13 @@ import Hello from './Hello';
 import './style.css';
 
 const MyButton = React.forwardRef((props, ref) => {
-  return (<button {...props} ref={ref}>Some text</button>);
+  return (<button {...props} ref={ref}>Click me</button>);
 });
 
 MyButton.displayName = 'MyButton';
 
 const App = (props) => {
-  let [name, nameSetter] = React.useState('Eric')
+  let [name, nameSetter] = React.useState('Marc')
   
   
   return (
@@ -21,7 +21,7 @@ const App = (props) => {
       </p>
 
       <MyButton onClick={() => {
-        nameSetter('Marc')
+        nameSetter('Eric')
       }} />
     </div>
   );
